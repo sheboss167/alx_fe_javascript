@@ -1,35 +1,35 @@
  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Quote Generator</title>
-  </head>
-  <body>
-    <h1>Dynamic Quote Generator</h1>
-    <div id="quoteDisplay"></div>
-    <button id="newQuote">Show New Quote</button>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Quote Generator</title>
+</head>
+<body>
+  <h1>Dynamic Quote Generator</h1>
 
-    <h1>Dynamic Quote Generator</h1>
+  <!-- Category Filter Dropdown -->
+  <select id="categoryFilter" onchange="filterQuotes()">
+    <option value="all">All Categories</option>
+    <!-- Categories dynamically added by JS -->
+  </select>
 
-<div id="quoteDisplay">Click "Show New Quote" to begin!</div>
+  <div id="quoteDisplay">Click "Show New Quote" to begin!</div>
 
-<button id="newQuote">Show New Quote</button>
+  <button id="newQuote">Show New Quote</button>
 
-<!-- Add Quote Form -->
-<div id="addQuoteForm">
-  <h2>Add a New Quote</h2>
-  <input type="text" id="newQuoteText" placeholder="Enter a new quote" />
-  <input type="text" id="newQuoteCategory" placeholder="Enter quote category" />
-  <button id="addQuoteBtn">Add Quote</button>
-</div>
+  <!-- Add Quote Form -->
+  <div id="addQuoteForm">
+    <h2>Add a New Quote</h2>
+    <input type="text" id="newQuoteText" placeholder="Enter a new quote" />
+    <input type="text" id="newQuoteCategory" placeholder="Enter quote category" />
+    <button id="addQuoteBtn">Add Quote</button>
+  </div>
 
-<!-- ✅ Required by checker -->
-<button id="exportQuotesBtn" onclick="exportToJsonFile()">Export Quotes</button>
+  <!-- Import / Export Buttons -->
+  <button id="exportQuotesBtn" onclick="exportToJsonFile()">Export Quotes</button>
+  <input type="file" id="importFile" accept=".json" onchange="importFromJsonFile(event)" />
 
-<input type="file" id="importFile" accept=".json" onchange="importFromJsonFile(event)" />
-
-<script src="script.js"></script>
-
-  </body>
-  </html>
+  <script src="script.js"></script>
+</body>
+</html>
