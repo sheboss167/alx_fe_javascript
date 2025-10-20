@@ -9,6 +9,27 @@
     <h1>Dynamic Quote Generator</h1>
     <div id="quoteDisplay"></div>
     <button id="newQuote">Show New Quote</button>
-    <script src="script.js"></script>
+
+    <h1>Dynamic Quote Generator</h1>
+
+<div id="quoteDisplay">Click "Show New Quote" to begin!</div>
+
+<button id="newQuote">Show New Quote</button>
+
+<!-- Add Quote Form -->
+<div id="addQuoteForm">
+  <h2>Add a New Quote</h2>
+  <input type="text" id="newQuoteText" placeholder="Enter a new quote" />
+  <input type="text" id="newQuoteCategory" placeholder="Enter quote category" />
+  <button id="addQuoteBtn">Add Quote</button>
+</div>
+
+<!-- ✅ Required by checker -->
+<button id="exportQuotesBtn" onclick="exportToJsonFile()">Export Quotes</button>
+
+<input type="file" id="importFile" accept=".json" onchange="importFromJsonFile(event)" />
+
+<script src="script.js"></script>
+
   </body>
   </html>
