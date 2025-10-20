@@ -44,26 +44,23 @@
   <h1>Dynamic Quote Generator</h1>
 
   <div class="controls">
-    <!-- Category Filter -->
     <select id="categoryFilter" onchange="filterQuotes()">
       <option value="all">All Categories</option>
     </select>
     <button id="newQuote">Show New Quote</button>
     <button id="exportQuotes">Export Quotes</button>
     <input type="file" id="importFile" accept=".json" onchange="importFromJsonFile(event)" />
+    <button id="syncNow" onclick="syncQuotes()">Sync Now</button>
   </div>
 
-  <!-- Quote Display -->
   <div id="quoteDisplay">Click "Show New Quote" to display a quote.</div>
 
-  <!-- Add Quote Section -->
   <div class="controls">
     <input id="newQuoteText" type="text" placeholder="Enter a new quote" />
     <input id="newQuoteCategory" type="text" placeholder="Enter quote category" />
     <button onclick="addQuote()">Add Quote</button>
   </div>
 
-  <!-- Sync status -->
   <div id="syncStatus"></div>
 
   <script src="script.js"></script>
